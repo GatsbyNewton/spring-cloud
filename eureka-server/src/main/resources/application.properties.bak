@@ -1,10 +1,10 @@
 spring.application.name=eureka-server
-server.port=8000
+server.port=8001
 
-eureka.instance.hostname=peer
+eureka.instance.hostname=peer1
 
 eureka.server.enable-self-preservation=false
 
 eureka.client.register-with-eureka=false
 eureka.client.fetch-registry=false
-eureka.client.service-url.default-zone=http://peer:8000/eureka/
+eureka.client.service-url.default-zone=http://${spring.application.name}:${server.port}/eureka/
