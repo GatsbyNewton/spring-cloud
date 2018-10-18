@@ -3,18 +3,18 @@ spring:
     name: eureka-server
 
 server:
-  port: 8000
+  port: 8001
 
 eureka:
   instance:
-    hostname: localhost
+    hostname: peer1
   client:
     # 由于该应用为注册中心，所以设置为false，代表不向注册中心注册自己
     register-with-eureka: false
     # 由于注册中心的职责就是维护服务实例，它并不需要去检索服务，所以也设置为false
     fetch-registry: false
     serviceUrl:
-      defaultZone: http://localhost:8000/eureka/
+      defaultZone: http://${spring.application.name}:${server.port}/eureka/
   # 本地调试时，关闭Eureka的自我保护机制
   server:
     enable-self-preservation: false
