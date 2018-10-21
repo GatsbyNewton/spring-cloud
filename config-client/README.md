@@ -1,2 +1,5 @@
-# Config Server
-- spring.cloud.config.server.git.uri：
+# Config Client
+- spring.application.name：
+- spring.cloud.config.profile：
+- spring.cloud.config.label：
+- spring.cloud.config.uri：
