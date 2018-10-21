@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: jimmy
+  cloud:
+    config:
+      # Application使用的环境配置
+      profile: dev
+      # 配置所在branch，即配置文件规则中{label}部分
+      label: master
+      # Config Server的地址
+      uri: http://localhost:7000/
+
+server:
+  port: 7001
