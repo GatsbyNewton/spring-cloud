@@ -1,0 +1,28 @@
+spring:
+  application:
+    name: config-server-eureka
+  cloud:
+    config:
+      server:
+        git:
+          # Git仓库的路径
+          uri: https://github.com/GatsbyNewton/spring-cloud
+          # Git仓库的密码
+          password: Wang19911108
+          # Git仓库的用户名
+          username: GatsbyNewton
+          # Git仓库的子目录
+          search-paths: /config-repo
+          # Config Server通过 git clone 将配置仓库复制到本地存储的路径。注意：config-basedir 必须是事先不存在
+          basedir: /Users/gatsbynewton/Documents/codes/spring/spring-cloud/config-basedir
+
+eureka:
+  client:
+    serviceUrl:
+      # 配置Eureka服务治理中心地址
+      defaultZone: http://peer1:8001/eureka/,http://peer2:8002/eureka/
+
+
+server:
+  port: 7100
+
