@@ -5,10 +5,23 @@ spring:
     config:
       # Application使用的环境配置
       profile: dev
+      discovery:
+        # 开启通过服务来访问Config Server的功能
+        enable: true
+        # 指定Config Server注册的服务名
+        serviceId: config-server-eureka
       # 配置所在branch，即配置文件规则中{label}部分
       label: master
       # Config Server的地址
-      uri: http://localhost:7000/
+      uri: http://localhost:7100/
+      # 避免当配置有误时，等到Spring Boot启动时的前置加载时间
+      fail-fast: true
+
+eureka:
+  client:
+    serviceUrl:
+      # 配置Eureka服务治理中心地址
+      defaultZone: http://peer1:8001/eureka/,http://peer2:8002/eureka/
 
 server:
-  port: 7001
+  port: 7101
