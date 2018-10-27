@@ -16,6 +16,7 @@
         <module>config-client</module>
         <module>config-server-eureka</module>
         <module>config-client-eureka</module>
+        <module>ribbon-consumer</module>
     </modules>
 
     <name>spring-cloud</name>
