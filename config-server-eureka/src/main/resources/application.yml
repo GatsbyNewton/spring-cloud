@@ -8,9 +8,9 @@ spring:
           # Git仓库的路径
           uri: https://github.com/GatsbyNewton/spring-cloud
           # Git仓库的密码
-          password: Wang19911108
+          password: password
           # Git仓库的用户名
-          username: GatsbyNewton
+          username: username
           # Git仓库的子目录
           search-paths: /config-repo
           # Config Server通过 git clone 将配置仓库复制到本地存储的路径。注意：config-basedir 必须是事先不存在
